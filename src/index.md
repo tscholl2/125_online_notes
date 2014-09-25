@@ -6,9 +6,9 @@ header-includes: |
     <script src="js/downloadepub.js" type="text/javascript"></script>
     <script src="js/gotorepo.js" type="text/javascript"></script>
     <script src="js/loader.js" type="text/javascript"></script>
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+    <script src="MathJax/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 css: stylesheets/styles.css
-title: Math 126
+title: Nameless
 ...
 
 <div class="wrapper">
