@@ -60,9 +60,9 @@ picture area under the curve plus approximations with rectangles
 
 ###Example
 
-Lets approximate the area under the curve $x^2+1$ on the interval $[0,2]$ using four rectangles with right endpoints. The area then is about the area of the rectangles. For each rectangle we calculuate the area in the usual way: width times height. We will always use equally spaced rectangles so the width will be the same for each of them. Since the interval has length $2 - 0 = 2$ and there are $4$ rectangles, this means each has width $\frac{2}{4} = \frac{1}{2}$. So the approximation for the area is $$A \approx (1/2)\cdot((1/2)^2+1) + (2/2)\cdot((2/2)^2+1) + (3/2)\cdot((3/2)^2+1) + (2)\cdot((2)^2+1) = 35/2 = 17.5$$.
+Lets approximate the area under the curve $x^2+1$ on the interval $[0,2]$ using four rectangles with right endpoints. The area then is about the area of the rectangles. For each rectangle we calculuate the area in the usual way: width times height. We will always use equally spaced rectangles so the width will be the same for each of them. Since the interval has length $2 - 0 = 2$ and there are $4$ rectangles, this means each has width $\frac{2}{4} = \frac{1}{2}$. So the approximation for the area is $$A \approx (1/2)\cdot((1/2)^2+1) + (2/2)\cdot((2/2)^2+1) + (3/2)\cdot((3/2)^2+1) + (2)\cdot((2)^2+1) = 35/2 = 17.5.$$
 
-Doing the same thing but with left end points we have $$A \approx (0)\cdot((0)^2+1) + (1/2)\cdot((1/2)^2+1) + (2/2)\cdot((2/2)^2+1) + (3/2)\cdot((3/2)^2+1) = 15/2 = 7.5$$.
+Doing the same thing but with left end points we have $$A \approx (0)\cdot((0)^2+1) + (1/2)\cdot((1/2)^2+1) + (2/2)\cdot((2/2)^2+1) + (3/2)\cdot((3/2)^2+1) = 15/2 = 7.5.$$
 
 ????????????
 
@@ -80,7 +80,7 @@ Eagle eyed readers will notice the difference in the results, one was an over es
 
 ###An arbitrary number of rectangles
 
-Now approximate area of the curve $f(x) = x^2+1$, on the interval $[0,2]$, only using $n$ rectangles instead of $4$. The idea should be the same. Now the width of each rectangle will be $\frac{2}{n}$. The right end point of the first rectangle will be at $2/n$. The right end point of the second rectangle will be at $2\cdot 2/n$. The rest are similar. That means the height of the first rectangle will be $f(1\cdot 2/n)$ and the height of the second will b e $f(2\cdot 2/n)$. Putting this all together the approximate area is $$ A \approx 1\cdot\frac{2}{n}f(1\cdot 2/n) + 2\cdot\frac{2}{n}f((2\cdot 2/n) + \cdots + n\cdot\frac{2}{n}f(n\codt 2/n) $$
+Now approximate area of the curve $f(x) = x^2+1$, on the interval $[0,2]$, only using $n$ rectangles instead of $4$. The idea should be the same. Now the width of each rectangle will be $\frac{2}{n}$. The right end point of the first rectangle will be at $2/n$. The right end point of the second rectangle will be at $2\cdot 2/n$. The rest are similar. That means the height of the first rectangle will be $f(1\cdot 2/n)$ and the height of the second will b e $f(2\cdot 2/n)$. Putting this all together the approximate area is $$ A \approx 1\cdot\frac{2}{n}f(1\cdot 2/n) + 2\cdot\frac{2}{n}f((2\cdot 2/n) + \cdots + n\cdot\frac{2}{n}f(n\cdot 2/n).$$
 
 ????????
 
@@ -103,7 +103,7 @@ You can sort of see how if we want to approximate the area under a curve, it's b
 
 From these we can see that
 
-* x_0 = a.
+* $x_0 = a$.
 * $[x_{i-1},x_i]$ is the base of the $i$th rectangle, so $\Delta x = x_i - x_{i-1}$.
 * The area of the $i$th rectangle using right endpoints is $f(x_i)\Delta x$.
 * The area of the $i$th rectangle using left endpoings is $f(x_{i-1})\Delta x$.
