@@ -6,7 +6,34 @@ header-includes: |
     <script src="js/downloadepub.js" type="text/javascript"></script>
     <script src="js/gotorepo.js" type="text/javascript"></script>
     <script src="js/loader.js" type="text/javascript"></script>
-    <script src="MathJax/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+    //<![CDATA[
+    MathJax.Hub.Config({
+        jax: [
+            "input/TeX",
+            "output/SVG",
+        ],
+        extensions: [
+            "tex2jax.js",
+            "MathEvents.js",
+        ],
+        TeX: {
+            extensions: [
+                "AMSmath.js",
+                "AMSsymbols.js",
+            ]
+        },
+        MathMenu: {
+            showRenderer: false
+        },
+        menuSettings: {
+            zoom: "Click"
+        },
+        messageStyle: "none",
+    });
+    //]]>
+    </script>
+    <script src="MathJax/MathJax.js" type="text/javascript"></script>
 css: stylesheets/styles.css
 title: Nameless
 ...
