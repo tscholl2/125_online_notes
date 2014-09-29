@@ -2,3 +2,5 @@
 *.DS_Store
 /build
 /js-src/gooan.js
+*.sage-backup
+*.sage-chat
