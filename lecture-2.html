@@ -1,0 +1,77 @@
+<h1 id="area">Area</h1>
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Areas we know</li>
+<li>Approximations</li>
+<li>Summation notation</li>
+<li>Actual area</li>
+</ul>
+<h2 id="areas-we-know">Areas we know</h2>
+<p>Remember a long time ago when you learned how to compute areas? We are going to do that again, only we are going to step it up a notch. Let’s start with the basics. What is the area of a rectangle with lenght <span class="math">\(l\)</span> and height <span class="math">\(h\)</span>? Or how about a triangle with base <span class="math">\(b\)</span> and height <span class="math">\(h\)</span>? These should be pretty easy. It turns out just knowing these two can help us find the area of a lot of different shapes. For example, consider a polygon. We can calculate the area by first dividing up the polygon into triangles and calculating the area of each triangle since we know how to do that.</p>
+<h3 id="picture">Picture</h3>
+<p>????????</p>
+<p>?????????????</p>
+<p>picture a rectangle, triangle, and polygon triangulated</p>
+<p>?????????????????</p>
+<p>??????????????</p>
+<p>????????</p>
+<h2 id="approximations">Approximations</h2>
+<p>With the niave methods above we can find the area of a lot of shapes, but we are still missing a lot. For example, what about a shape with curved sides? We will find these by approximating the shape with simpler shapes. To start off, consider the following picture showing the area under the graph of the function <span class="math">\(f(x) = x^2 + 1\)</span> on the interval <span class="math">\([0,2]\)</span>. We don’t have the tools to find the area, but we can get pretty close by just drawing rectangles as shown in the figure.</p>
+<p>????????</p>
+<p>?????????????</p>
+<p>picture area under the curve plus approximations with rectangles</p>
+<p>?????????????????</p>
+<p>??????????????</p>
+<p>????????</p>
+<h3 id="left-vs-right">Left vs Right</h3>
+<p>There are a few ways to draw the approximating rectangles above. The two main methods we will use are “left endpoints” and “right endpoints”. The side is based on which endpoint of the rectangle lies on the graph of the function.</p>
+<p>????????</p>
+<p>?????????????</p>
+<p>picture area under the curve plus approximations with rectangles</p>
+<p>?????????????????</p>
+<p>??????????????</p>
+<p>????????</p>
+<h3 id="example">Example</h3>
+<p>Lets approximate the area under the curve <span class="math">\(x^2+1\)</span> on the interval <span class="math">\([0,2]\)</span> using four rectangles with right endpoints. The area then is about the area of the rectangles. For each rectangle we calculuate the area in the usual way: width times height. We will always use equally spaced rectangles so the width will be the same for each of them. Since the interval has length <span class="math">\(2 - 0 = 2\)</span> and there are <span class="math">\(4\)</span> rectangles, this means each has width <span class="math">\(\frac{2}{4} = \frac{1}{2}\)</span>. So the approximation for the area is <span class="math">\[A \approx (1/2)\cdot((1/2)^2+1) + (2/2)\cdot((2/2)^2+1) + (3/2)\cdot((3/2)^2+1) + (2)\cdot((2)^2+1) = 35/2 = 17.5.\]</span></p>
+<p>Doing the same thing but with left end points we have <span class="math">\[A \approx (0)\cdot((0)^2+1) + (1/2)\cdot((1/2)^2+1) + (2/2)\cdot((2/2)^2+1) + (3/2)\cdot((3/2)^2+1) = 15/2 = 7.5.\]</span></p>
+<p>????????????</p>
+<p>?????????????????</p>
+<p>another picture</p>
+<p>?????</p>
+<p>?????????</p>
+<h3 id="note">Note</h3>
+<p>Eagle eyed readers will notice the difference in the results, one was an over estimate while the other an under. This is also clear just from looking at the pictures. See if you can figure out when left endpoints will overestimate and when right end points will overestimate.</p>
+<h3 id="an-arbitrary-number-of-rectangles">An arbitrary number of rectangles</h3>
+<p>Now approximate area of the curve <span class="math">\(f(x) = x^2+1\)</span>, on the interval <span class="math">\([0,2]\)</span>, only using <span class="math">\(n\)</span> rectangles instead of <span class="math">\(4\)</span>. The idea should be the same. Now the width of each rectangle will be <span class="math">\(\frac{2}{n}\)</span>. The right end point of the first rectangle will be at <span class="math">\(2/n\)</span>. The right end point of the second rectangle will be at <span class="math">\(2\cdot 2/n\)</span>. The rest are similar. That means the height of the first rectangle will be <span class="math">\(f(1\cdot 2/n)\)</span> and the height of the second will b e <span class="math">\(f(2\cdot 2/n)\)</span>. Putting this all together the approximate area is <span class="math">\[ A \approx \frac{2}{n}f(1\cdot 2/n) + \frac{2}{n}f((2\cdot 2/n) + \cdots + \frac{2}{n}f(n\cdot 2/n).\]</span></p>
+<p>Try replacing <span class="math">\(n\)</span> with <span class="math">\(4\)</span> and checking that this expression is indeed the same as the one we had earlier.</p>
+<h2 id="summation-notation">Summation Notation</h2>
+<p>You can sort of see how if we want to approximate the area under a curve, it’s best to use a lot of rectangles. Only that means we have to add up a lot of different calculations which are all very similar. It would be a rediculous pain to write down a sum of that many terms. So it’s helpful to have a little bit of notation to help keep track of everything.</p>
+<ul>
+<li>Let <span class="math">\([a,b]\)</span> be the interval that we are looking at.</li>
+<li>Let <span class="math">\(\Delta x\)</span> be the width of the rectangles. For <span class="math">\(n\)</span> rectangles this will be <span class="math">\(\frac{b - a}{n}\)</span>.</li>
+<li>Let <span class="math">\(x_i = i\Delta x + a\)</span>. This is the right end point of the <span class="math">\(i\)</span>th rectangle.</li>
+<li>Let <span class="math">\(x_i^\ast\)</span> represent any point in <span class="math">\([x_{i-1},x_i]\)</span>.</li>
+</ul>
+<p>Here are a few facts to help make sure you understand the notation.</p>
+<ul>
+<li>For <span class="math">\(n\)</span> rectangles, <span class="math">\(x_0 = a\)</span> and <span class="math">\(x_n = b\)</span> so in particular <span class="math">\([a,b] = [x_0,x_n]\)</span>.</li>
+<li><span class="math">\([x_{i-1},x_i]\)</span> is the base of the <span class="math">\(i\)</span>th rectangle, so <span class="math">\(\Delta x = x_i - x_{i-1}\)</span>.</li>
+<li>The area of the <span class="math">\(i\)</span>th rectangle using right endpoints is <span class="math">\(f(x_i)\Delta x\)</span>.</li>
+<li>The area of the <span class="math">\(i\)</span>th rectangle using left endpoings is <span class="math">\(f(x_{i-1})\Delta x\)</span>.</li>
+</ul>
+<p>So we may rewrite the long sum: <span class="math">\[
+A \approx \frac{2}{n}f(1\cdot 2/n) + \frac{2}{n}f((2\cdot 2/n) + \cdots + \frac{2}{n}f(n\cdot 2/n)
+\]</span> with the slightly easier sum: <span class="math">\[
+A \approx \Delta x f(x_1) + \Delta x f(x_2) + \cdots + \Delta x f(x_n).
+\]</span></p>
+<p>To make it look even better we introduce summation notation (sometimes refered to as sigma notation).</p>
+<p><span class="math">\[
+A \approx \sum_{i=1}^n \Delta x f(x_i).
+\]</span></p>
+<p>The <span class="math">\(\sum\)</span> symbol means “sum”. The <span class="math">\(i\)</span> is called the index or “dummy variable”. It means take what is inside the sum, in this case <span class="math">\(\Delta x f(x_i)\)</span>, and add it together changing the index <span class="math">\(i\)</span> from <span class="math">\(1\)</span> to <span class="math">\(n\)</span>. If you have ever taken any computer science class, this should remind you of a “for loop”.</p>
+<p>For a simpler example, consider <span class="math">\(\sum_{i=1}^3 2\)</span>. This means sum “<span class="math">\(2\)</span>” three times so <span class="math">\(\sum_{i=1}^3 2 = 2 + 2 + 2\)</span>. Usually for us the expression we are adding will be a function of the index variable. For example, <span class="math">\(\sum_{i=1}^4 i = 1 + 2 + 3 + 4\)</span>.</p>
+<p>Make sure these simpler examples make sense and then go back and see why <span class="math">\[\sum_{i=1}^n \Delta x f(x_i) = \Delta x f(x_1) + \Delta x f(x_2) + \cdots + \Delta x f(x_n).\]</span></p>
+<p>???????????????????????????????????</p>
+<p>???????????????????????????</p>
+<p>????????????????????</p>
+<p>???????????????</p>

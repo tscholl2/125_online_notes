@@ -1,0 +1,144 @@
+<h1 id="lecture-1">Lecture 1</h1>
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Introduction</li>
+<li>Definitions</li>
+<li>Examples</li>
+<li>Applications</li>
+<li>Geometry</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Remember back in differential calculus you learned all about derivatives and how to find them, for example <span class="math">\(\frac{d}{dx}\left(x^3\right) = 3x^2\)</span>. In this course we will learn how to go backwards. So instead of having <span class="math">\(f\)</span> and finding <span class="math">\(f&#39;\)</span>, we will have <span class="math">\(f&#39;\)</span> and try to recover <span class="math">\(f\)</span>.</p>
+<h3 id="definition">Definition</h3>
+<p>A function <span class="math">\(F\)</span> is an <em>antiderivative</em> of a function <span class="math">\(f\)</span> if <span class="math">\(F&#39;(x) = f(x)\)</span>.</p>
+<h3 id="example">Example</h3>
+<ul>
+<li><span class="math">\(x^3\)</span> is an antiderivative of <span class="math">\(3x^2\)</span>.</li>
+<li><span class="math">\(x^2 + 3x + 1\)</span> is an antiderivative of <span class="math">\(2x + 3\)</span>.</li>
+</ul>
+<h3 id="example-1">Example</h3>
+<p>It is important to realize that this really is backwards. In differential calculus you would say</p>
+<ul>
+<li><span class="math">\(3x^2\)</span> is the derivative of <span class="math">\(x^3\)</span>.</li>
+<li><span class="math">\(2x + 3\)</span> is the derivative of <span class="math">\(x^2 + 3x + 1\)</span>.</li>
+</ul>
+<p>The eagle-eyed reader will notice another difference in the two examples. One uses the word “an” and the other uses “the”. So the next thing to do is to ask why.</p>
+<h3 id="question">Question</h3>
+<p>Why do we not say “the antiderivative”?</p>
+<h3 id="answer">Answer</h3>
+<p>The best answer to this question is another question. Is there another antiderivative of <span class="math">\(2x + 3\)</span> besides the one listed above? Yes! There is actually a lot of them. Another is <span class="math">\(x^3 + 3x\)</span>. See how many you can write down. Is there a pattern?</p>
+<p>So far we have found that everything of the form <span class="math">\(x^2 + 3x + C\)</span> (here <span class="math">\(C\)</span> is just some number like <span class="math">\(1\)</span> or <span class="math">\(0\)</span>) is an antiderivative of <span class="math">\(2x + 3\)</span>. We might wonder if there are others.</p>
+<h3 id="theorem">Theorem</h3>
+<p>No. That is, every antiderivative of <span class="math">\(2x+3\)</span> is of the form <span class="math">\(x^2 + 3x + C\)</span>. In general, given a function <span class="math">\(f\)</span> and <em>any</em> antiderivative <span class="math">\(F\)</span>, then <em>all</em> antiderivatives are of the form <span class="math">\(F + C\)</span> for some constant <span class="math">\(C\)</span>.</p>
+<h3 id="example-2">Example</h3>
+<ul>
+<li>The antiderivatives of <span class="math">\(\sin(x)\)</span> are all of the form <span class="math">\(-\cos(x) + C\)</span>.</li>
+<li>The antiderivatives of <span class="math">\(x^4\)</span> are all of the form <span class="math">\(\frac{x^5}{5} + C\)</span>.</li>
+</ul>
+<h3 id="warning">Warning</h3>
+<p>Don’t forget the “<span class="math">\(+C\)</span>”.</p>
+<h3 id="practice">Practice</h3>
+<p>Find the general antiderivative of the following functions (see solutions at the bottom to check):</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Antiderivative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(x^n\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(e^x\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(\cos x\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(\sin x\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(\sec^2 x\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(\sec x \tan x\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(\csc^2 x\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(x^{-1}\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toughy">Toughy</h3>
+<p>What are the antiderivatives of <span class="math">\(\frac{x^2 + \sqrt{x}}{x}\)</span>?</p>
+<p>Note we can rewrite this as <span class="math">\(x + x^{-1/2}\)</span> and then check that all antiderivatives are of the form <span class="math">\(\frac{1}{2}x^2 + 2x^{1/2} + C\)</span>.</p>
+<h3 id="a-note-on-the-c">A note on the +C</h3>
+<p>From above we know that there are many antiderivatives for a function. We represent the “general form” of an antiderivative by writing a “<span class="math">\(+C\)</span>” on the end. But suppose we want a specific antiderivative. We do this by declaring intial conditions. For example, find an antiderivative <span class="math">\(F\)</span> of the function <span class="math">\(f(x) = 2x\)</span> such that <span class="math">\(F(1) = 3\)</span>. Then we solve for the general antideriavtive, namely <span class="math">\(F(x) = x^2 + C\)</span> and use the initial conditions to find the correct value of <span class="math">\(C\)</span>. Namely <span class="math">\(3 = F(1) = 1^2 + C\)</span> which solves to <span class="math">\(C = 2\)</span>. So the specific antiderivative we need is <span class="math">\(F(x) = x^2 + 2\)</span>.</p>
+<h2 id="applications">Applications</h2>
+<p>Recall in physics that the acceleration <span class="math">\(a(t)\)</span> is the derivative of velocity <span class="math">\(v(t)\)</span> which is the derivative of position <span class="math">\(s(t)\)</span>. So with our new words we would say velocity is the antiderivative of acceleration and position is antiderivative of velocity.</p>
+<h3 id="example-3">Example</h3>
+<p>Suppose a car is going somewhere, we don’t care because we are mathematicians. But we do care that the car’s velocity is given by <span class="math">\(v(t) = 2t^3\)</span>.</p>
+<h2 id="geometry">Geometry</h2>
+<p>You can reverse everything you learned in 124. For example if <span class="math">\(F&#39;(a) &gt; 0\)</span> then <span class="math">\(F\)</span> is increasing at <span class="math">\(a\)</span>. Or reading backwards, if <span class="math">\(F\)</span>, the antiderivative of <span class="math">\(F&#39;\)</span>, is increasing at <span class="math">\(a\)</span>, then <span class="math">\(F&#39;(a)&gt;0\)</span>.</p>
+<h3 id="picture">Picture</h3>
+<p>TO-DO?????????</p>
+<p>???????</p>
+<p>?????????????</p>
+<p>???????????????????????</p>
+<p>?????</p>
+<p>?????????????????</p>
+<h2 id="solutions">Solutions</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Antiderivative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(x^n\)</span></td>
+<td style="text-align: left;"><span class="math">\(\frac{1}{n+1}x^{n+1} + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(e^x\)</span></td>
+<td style="text-align: left;"><span class="math">\(e^x + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(\cos x\)</span></td>
+<td style="text-align: left;"><span class="math">\(\sin x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(\sin x\)</span></td>
+<td style="text-align: left;"><span class="math">\(-\cos x + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(\sec^2 x\)</span></td>
+<td style="text-align: left;"><span class="math">\(\tan x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(\sec x \tan x\)</span></td>
+<td style="text-align: left;"><span class="math">\(\sec x + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math">\(\csc^2 x\)</span></td>
+<td style="text-align: left;"><span class="math">\(-\cot x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(x^{-1}\)</span></td>
+<td style="text-align: left;"><span class="math">\(\ln |x| + C\)</span></td>
+</tr>
+</tbody>
+</table>
